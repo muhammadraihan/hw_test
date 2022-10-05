@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'v1'], function () {
     Route::post('login', 'Api\AuthController@Login');
+    Route::post('buku', 'Api\BukuController@store');
+    Route::get('buku', 'Api\BukuController@index');
+    Route::put('buku', 'Api\BukuController@update');
+    Route::delete('buku', 'Api\BukuController@destroy');
+    Route::get('pinjam', 'Api\BukuController@pinjam');
 });
 
 // Auth route
